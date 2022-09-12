@@ -9,26 +9,26 @@ For example, if you print some metrics into a log file, you can use this tool to
 ### Plot an array from a log file
 
 If you have an unstructured plain text file like:
-```
-[[032m2022-09-10 21:43:03,770]Total epoch: 0. model loss: 0.42456936836242676.
-[[032m2022-09-10 21:43:03,791] token 0 - 5551, 1097.58837890625,  targeting
+<pre>
+[[032m2022-09-10 21:43:03,770]Total epoch: 0. <b>model loss: 0.42456936836242676</b>.
+[[032m2022-09-10 21:43:03,791] token 0 - 5551, 1097.58837890625,  targeting
  token 1 - 1058.235107421875, InstoreAndOnline
  token 2 - 0.10239370167255402,  A
  token 3 - 0.10239171236753464,  sentence
  token 4 - 0.10238830745220184,  :
  token 5 - 977.8533935546875,  predict
  token 6 - 1051.5157470703125, --+
-[[032m2022-09-10 21:43:04,297]Total epoch: 1. model loss: 0.39936694502830505.
-[[032m2022-09-10 21:43:04,316] token 0 - 5551, 1097.58837890625,  targeting
+[[032m2022-09-10 21:43:04,297]Total epoch: 1. <b>model loss: 0.39936694502830505</b>.
+[[032m2022-09-10 21:43:04,316] token 0 - 5551, 1097.58837890625,  targeting
  token 1 - 1058.3414306640625, InstoreAndOnline
  token 2 - 0.2732486128807068,  A
  token 3 - 0.2605493366718292,  sentence
  token 4 - 0.28173941373825073,  :
  token 5 - 978.6373291015625,  predict
  token 6 - 1051.77685546875, --+
-[[032m2022-09-10 21:43:04,840Total epoch: 2. model loss: 0.40558159351348877.
+[[032m2022-09-10 21:43:04,840]Total epoch: 2. <b>model loss: 0.40558159351348877</b>.
 ...
-```
+</pre>
 
 And you may want to extract the `model loss` values of all epochs. You can run:
 ```bash
