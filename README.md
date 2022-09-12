@@ -1,8 +1,16 @@
 # ExactNum
 
+![https://pypi.org/project/extractnum/](https://img.shields.io/pypi/v/extractnum)
+![https://pypi.org/project/extractnum/](https://img.shields.io/pypi/l/extractnum)
+
+
 A CLI for extracting arrays from an unstructured text file and plotting results.
 
 For example, if you print some metrics into a log file, you can use this tool to extract them. This array can be plotting as a diagram to show the trend, or be saved into a stuctured file, e.g., json or csv.
+
+```bash
+pip install extractnum
+```
 
 ## Quick start
 
