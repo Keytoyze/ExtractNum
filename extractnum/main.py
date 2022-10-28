@@ -167,6 +167,9 @@ def main():
         current_line += 1
         if current_line < args.offset:
             continue
+        # Substitute multiple whitespace with single whitespace
+        _RE_COMBINE_WHITESPACE = re.compile(r"\s+")
+        line = _RE_COMBINE_WHITESPACE.sub(" ", line).strip()
         for p in patterns:
             result = p.search(line)
             if result is not None:
