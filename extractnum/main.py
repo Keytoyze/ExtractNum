@@ -160,6 +160,9 @@ def main():
             except re.error as e:
                 on_error(f"Cannot parse the plain pattern: '{p}'. Error: {str(e)}")
 
+    # Substitute multiple whitespace with single whitespace
+    _RE_COMBINE_WHITESPACE = re.compile(r"\s+")
+        
     # parse
     label_to_array = {}
     current_line = -1
@@ -167,6 +170,7 @@ def main():
         current_line += 1
         if current_line < args.offset:
             continue
+        line = _RE_COMBINE_WHITESPACE.sub(" ", line).strip()
         for p in patterns:
             result = p.search(line)
             if result is not None:
